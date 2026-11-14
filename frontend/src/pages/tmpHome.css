@@ -1,0 +1,128 @@
+/*
+ * TEMPORARY home page styles.
+ * Everything is scoped to .tmpHome so it doesn't affect other pages or the
+ * global styles in index.css (owned by the design team). Remove or merge
+ * once the team's final design is in place.
+ */
+
+.tmpHome {
+  --navy: #001f5b;
+  --powder-blue: #72a9be;
+  --bright-blue: #0070c0;
+  --orange: #fd652f;
+  --red: #d33a02;
+  --grey: #626366;
+
+  font-family: "Univers LT Std", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+}
+
+.tmpHome h1,
+.tmpHome h2,
+.tmpHome h3 {
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.tmpHome h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tmpHome h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.tmpHome h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tmpHome p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+}
+
+.tmpHome .caption {
+  color: var(--grey);
+}
+
+@media (max-width: 767px) {
+  .tmpHome h1 {
+    font-size: 32px;
+  }
+
+  .tmpHome h2 {
+    font-size: 26px;
+  }
+
+  .tmpHome h3 {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+/*
+ * Solid navy is a stand-in for the photo. To swap in the image later:
+ *   background:
+ *     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+ *     url("../assets/hero.jpg") center / cover no-repeat;
+ */
+.tmpHome .hero {
+  display: flex;
+  align-items: center;
+  min-height: 420px;
+  padding: 64px;
+  border-radius: 20px;
+  background-color: var(--navy);
+  color: #fff;
+  text-align: left;
+  overflow: hidden;
+}
+
+.tmpHome .hero-content {
+  max-width: 640px;
+}
+
+/* Override the navy heading / black body colors inside the hero. */
+.tmpHome .hero h1,
+.tmpHome .hero p {
+  color: #fff;
+}
+
+.tmpHome .hero-eyebrow {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tmpHome .hero h1 {
+  margin: 4px 0 16px;
+}
+
+.tmpHome .hero-text {
+  margin: 0;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .hero {
+    min-height: 320px;
+    padding: 40px 24px;
+  }
+
+  .tmpHome .hero-eyebrow {
+    font-size: 16px;
+  }
+
+  .tmpHome .hero-text {
+    font-size: 16px;
+  }
+}

@@ -1,9 +1,18 @@
+import "./tmpHome.css";
+
 export default function Home() {
   return (
-    <section>
-      <h1>SHPE Northeastern</h1>
-      <p>Welcome to the SHPE Northeastern chapter website.</p>
-      <p>Home page content coming soon.</p>
-    </section>
+    <div className="tmpHome">
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-content">
+          <p className="hero-eyebrow">Welcome to</p>
+          <h1 id="hero-title">SHPE at Northeastern</h1>
+          <p className="hero-text">
+            Open to everyone, SHPE is the nation's largest association dedicated
+            to fostering Hispanic leadership in the STEM field.
+          </p>
+        </div>
+      </section>
+    </div>
   );
 }
