@@ -126,3 +126,65 @@
     font-size: 16px;
   }
 }
+
+/* ---------- Section spacing (Who We Are, Our Pillars) ---------- */
+
+.tmpHome .who-we-are,
+.tmpHome .our-pillars {
+  margin-top: 64px;
+}
+
+.tmpHome .who-we-are .section-header,
+.tmpHome .our-pillars .section-header {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .who-we-are,
+  .tmpHome .our-pillars {
+    margin-top: 48px;
+  }
+
+  .tmpHome .who-we-are .section-header,
+  .tmpHome .our-pillars .section-header {
+    margin-bottom: 24px;
+  }
+}
+
+/* ---------- Who We Are ---------- */
+
+.tmpHome .who-we-are-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+/* Vertically center the text when the card stretches to the photo's height. */
+.tmpHome .who-we-are-row .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .who-we-are-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+}
+
+/* ---------- Our Pillars ---------- */
+
+.tmpHome .pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .pillars-list {
+    gap: 40px;
+  }
+}
