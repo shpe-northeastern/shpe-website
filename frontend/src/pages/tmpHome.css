@@ -70,6 +70,10 @@
 /* ---------- Hero ---------- */
 
 /*
+ * Full-bleed hero: breaks out of the 1100px .main-content container so it
+ * spans the whole screen width, and pulls up to sit right under the navbar
+ * (cancelling .main-content's 2rem top margin).
+ *
  * Solid navy is a stand-in for the photo. To swap in the image later:
  *   background:
  *     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -78,16 +82,32 @@
 .tmpHome .hero {
   display: flex;
   align-items: center;
+  width: 100vw;
   min-height: 420px;
-  padding: 64px;
-  border-radius: 20px;
+  margin-top: -2rem;
+  margin-left: calc(50% - 50vw);
+  padding: 64px 0;
   background-color: var(--navy);
   color: #fff;
   text-align: left;
   overflow: hidden;
 }
 
+/* 100vw includes the scrollbar on some systems (e.g. Windows), which would
+   cause a small sideways scroll. Clip it on the home page only. */
+body:has(.tmpHome) {
+  overflow-x: clip;
+}
+
+/* Keep the text lined up with the rest of the page's 1100px content column. */
 .tmpHome .hero-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tmpHome .hero-content > * {
   max-width: 640px;
 }
 
@@ -115,7 +135,7 @@
 @media (max-width: 767px) {
   .tmpHome .hero {
     min-height: 320px;
-    padding: 40px 24px;
+    padding: 40px 0;
   }
 
   .tmpHome .hero-eyebrow {
@@ -127,26 +147,30 @@
   }
 }
 
-/* ---------- Section spacing (Who We Are, Our Pillars) ---------- */
+/* ---------- Section spacing (Who We Are, Our Pillars, Get Involved) ---------- */
 
 .tmpHome .who-we-are,
-.tmpHome .our-pillars {
+.tmpHome .our-pillars,
+.tmpHome .get-involved {
   margin-top: 64px;
 }
 
 .tmpHome .who-we-are .section-header,
-.tmpHome .our-pillars .section-header {
+.tmpHome .our-pillars .section-header,
+.tmpHome .get-involved .section-header {
   margin-bottom: 32px;
 }
 
 @media (max-width: 767px) {
   .tmpHome .who-we-are,
-  .tmpHome .our-pillars {
+  .tmpHome .our-pillars,
+  .tmpHome .get-involved {
     margin-top: 48px;
   }
 
   .tmpHome .who-we-are .section-header,
-  .tmpHome .our-pillars .section-header {
+  .tmpHome .our-pillars .section-header,
+  .tmpHome .get-involved .section-header {
     margin-bottom: 24px;
   }
 }
@@ -186,5 +210,140 @@
 @media (max-width: 767px) {
   .tmpHome .pillars-list {
     gap: 40px;
+  }
+}
+
+/* ---------- Get Involved ---------- */
+
+/* Hides an element visually but keeps it available to screen readers. */
+.tmpHome .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.tmpHome .get-involved-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.tmpHome .get-involved-link,
+.tmpHome .stay-in-loop-link {
+  font-weight: 700;
+}
+
+.tmpHome .get-involved-link {
+  color: var(--red);
+}
+
+/* "Stay in the Loop" bar: title | caption | link */
+.tmpHome .stay-in-loop {
+  margin-top: 32px;
+}
+
+.tmpHome .stay-in-loop .card {
+  padding: 24px 32px;
+}
+
+.tmpHome .stay-in-loop .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.tmpHome .stay-in-loop h3,
+.tmpHome .stay-in-loop p {
+  margin: 0;
+}
+
+.tmpHome .stay-in-loop-link {
+  color: var(--bright-blue);
+  white-space: nowrap;
+}
+
+/* Newsletter row: text | email input | button */
+.tmpHome .newsletter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.tmpHome .newsletter-title {
+  margin: 0;
+}
+
+.tmpHome .newsletter-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 20px;
+  border: 1.5px solid var(--grey);
+  border-radius: 20px;
+  font: inherit;
+  font-size: 16px;
+}
+
+.tmpHome .newsletter-button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--orange);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tmpHome .newsletter-input:focus-visible,
+.tmpHome .newsletter-button:focus-visible {
+  outline: 2px solid var(--bright-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .get-involved-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tmpHome .stay-in-loop {
+    margin-top: 24px;
+  }
+
+  .tmpHome .stay-in-loop .card {
+    padding: 24px;
+  }
+
+  .tmpHome .stay-in-loop .card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .tmpHome .newsletter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 24px;
+  }
+}
+
+/* ---------- Brand block (bottom of page) ---------- */
+
+.tmpHome .brand-block {
+  margin-top: 64px;
+}
+
+@media (max-width: 767px) {
+  .tmpHome .brand-block {
+    margin-top: 48px;
   }
 }

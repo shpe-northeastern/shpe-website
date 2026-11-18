@@ -1,0 +1,30 @@
+/* Spacing around the block is left to the parent page/layout. */
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand-block-logo {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+}
+
+.brand-block-text p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.brand-block-name {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand-block-text .caption {
+  font-size: 18px;
+}
