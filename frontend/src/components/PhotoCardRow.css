@@ -1,0 +1,26 @@
+/* Mobile first: one column, photo on top (its markup order). */
+.photo-card-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Wider screens: card takes ~3/4 of the width, photo ~1/4. */
+@media (min-width: 768px) {
+  .photo-card-row {
+    gap: 32px;
+  }
+
+  .photo-card-row-photo-left {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .photo-card-row-photo-right {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  /* Move the photo to the right column without changing the markup order. */
+  .photo-card-row-photo-right .photo-card-row-photo {
+    order: 2;
+  }
+}

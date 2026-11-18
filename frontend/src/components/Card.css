@@ -1,0 +1,30 @@
+/* Uses brand color variables defined by the surrounding page (e.g. .tmpHome).
+   The border color is set inline from the `tone` prop. */
+
+.card {
+  background-color: #fff;
+  border: 1.5px solid var(--navy);
+  border-radius: 24px;
+  padding: 2rem 2.5rem;
+}
+
+.card-align-left {
+  text-align: left;
+}
+
+.card-align-center {
+  text-align: center;
+}
+
+.card-title {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.card-body {
+  color: #000;
+}
+
+.card-body > :last-child {
+  margin-bottom: 0;
+}

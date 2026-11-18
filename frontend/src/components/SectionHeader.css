@@ -1,0 +1,7 @@
+/* Uses brand color variables defined by the surrounding page (e.g. .tmpHome). */
+
+.section-header {
+  color: var(--navy);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--red);
+}
