@@ -177,7 +177,6 @@ Before creating a new component, contributors should check whether one already e
 - Navbar
 - Footer
 - Buttons
-- Cards
 - Section Headers
 
 ---
