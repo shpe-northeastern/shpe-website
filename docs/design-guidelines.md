@@ -8,23 +8,49 @@ Provide a shared visual foundation for all SHPE Northeastern website contributor
 ## Typography
 
 ### Recommended Direction
-- Use a modern sans-serif font.
-- Maintain a consistent heading hierarchy across all pages.
-- Use the same font family throughout the website.
+Use the official SHPE font where possible.
+
+If the official SHPE font cannot be implemented or supported within the project stack, use the following fallback fonts:
+
+- Helvetica
+- Arial
+
+Maintain a consistent heading hierarchy across all pages and use the same font family throughout the website.
 
 ### Decisions Needed
 
-**Primary Font**
-- TBD
+**Preferred Font (Official SHPE Font):**
+- TBD (verify SHPE branding assets and implementation feasibility)
+
+**Fallback Font Stack:**
+- Helvetica, Arial, sans-serif
 
 **Secondary Font (Optional)**
 - TBD
 
 ### Heading Structure
-- H1 (Page Titles): TBD
-- H2 (Section Headers): TBD
-- H3 (Subsection Headers): TBD
-- Body Text: TBD
+
+**H1 - Page Titles**
+- Desktop: 48px
+- Mobile: 32px
+- Font Weight: Bold (700)
+
+**H2 - Section Headers**
+- Desktop: 32px
+- Mobile: 26px
+- Font Weight: Bold (700)
+
+**H3 - Subsection Headers**
+- Desktop: 24px
+- Mobile: 20px
+- Font Weight: Semibold (600)
+
+**Body Text**
+- Font Size: 16px
+- Font Weight: Regular (400)
+- Line Height: 1.6
+
+**Note:** Typography sizing may be adjusted during implementation if needed.
 
 ---
 
@@ -32,6 +58,25 @@ Provide a shared visual foundation for all SHPE Northeastern website contributor
 
 ### Recommended Direction
 Align with SHPE branding while complementing Northeastern branding where appropriate.
+
+Reference Inspiration:
+- https://shpe.mit.edu
+
+### Palette
+
+| Color | Hex |
+|---|---|
+| Navy | #001F5B |
+| Bright Blue | #0070C0 |
+| Orange | #FD652F |
+| Powder Blue | #72A9BE |
+| Red | #D33A02 |
+| Gray | #E2E8F0 |
+
+### Suggested Usage
+- Titles and Headings: Dark Blue
+- Primary Text: Black
+- Captions / Detail Text: TBD (requires darker accessible gray selection)
 
 ### Decisions Needed
 
@@ -44,9 +89,6 @@ Align with SHPE branding while complementing Northeastern branding where appropr
 **Accent Color**
 - TBD
 
-**Text Color**
-- TBD
-
 **Background Color**
 - TBD
 
@@ -54,7 +96,7 @@ Align with SHPE branding while complementing Northeastern branding where appropr
 
 ## Shared Components
 
-The following components should maintain consistent styling throughout the website:
+The following components should be implemented as global reusable components that developers can pull into their pages as needed:
 
 - Navigation Bar
 - Footer
@@ -62,15 +104,24 @@ The following components should maintain consistent styling throughout the websi
 - Secondary Buttons
 - Cards
 - Section Headers
-- Social Media Links
 
 ---
 
 ## Button Standards
 
 ### Decisions Needed
-- Primary button color
-- Secondary button color
+
+Primary Button Style:
+- Background Color: TBD (Orange or White)
+- Text Color: TBD
+
+Secondary Button Style:
+- Background Color: TBD (Orange or White)
+- Text Color: TBD
+
+**Note:** One button style should use the SHPE orange accent color while the other should use white. Final assignment is pending confirmation.
+
+Other decisions:
 - Border radius
 - Hover behavior
 - Disabled state behavior
