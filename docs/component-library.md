@@ -38,23 +38,15 @@ Used for primary and secondary actions throughout the website.
 
 Used for main calls to action.
 
-**Decisions Needed**
+Styling standards for colors, typography, spacing, and branding should follow the definitions established in `design-guidelines.md`.
 
-- Background Color: __________
-- Text Color: __________
-- Border Radius: __________
-- Hover Behavior: __________
+---
 
 ##### Secondary Button
 
 Used for less prominent actions.
 
-**Decisions Needed**
-
-- Background Color: __________
-- Text Color: __________
-- Border Radius: __________
-- Hover Behavior: __________
+Styling standards for colors, typography, spacing, and branding should follow the definitions established in `design-guidelines.md`.
 
 #### Sizes
 
@@ -95,10 +87,13 @@ Provides consistent navigation throughout the website.
 
 #### Decisions Needed
 
-- Mobile Behavior: __________
+- Sticky Navigation: Enabled
 - Dropdown Usage: __________
-- Sticky Navigation: __________
 - Logo Placement: __________
+
+#### Requirement
+
+Navigation components must be mobile friendly and responsive across supported device sizes.
 
 ---
 
@@ -117,8 +112,8 @@ Provides common information across all pages.
 
 #### Decisions Needed
 
-- Footer Layout: __________
-- Social Links: __________
+- Footer Layout: Logo, navigation links, and contact/social links
+- Social Links: Email, Linktree, Instagram, LinkedIn, and other approved chapter platforms
 - Contact Information Display: __________
 
 ---
@@ -157,11 +152,16 @@ Displays grouped information in a consistent format.
 
 #### Decisions Needed
 
-- Border Radius: __________
-- Shadow Styling: __________
-- Hover Behavior: __________
-- Header Layout: __________
-- Image Placement: __________
+Card standardization is currently under discussion.
+
+Potential approach:
+
+- Create a generic reusable card component
+- Allow page owners to pass colors and content based on page needs
+
+Status:
+
+- TBD
 
 ---
 
@@ -180,7 +180,7 @@ Provides consistent section titles throughout the website.
 
 #### Decisions Needed
 
-- Typography Style: __________
+- Typography Style: See design-guidelines.md
 - Alignment: __________
 - Divider Usage: __________
 
@@ -229,6 +229,7 @@ Before developing a new component, contributors should:
 2. Reuse existing styles where possible.
 3. Propose additions through team discussion.
 4. Update this document when new shared components are created.
+5. Page owners should be notified when shared components are added, modified, or deprecated.
 
 ---
 
