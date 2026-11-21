@@ -102,7 +102,6 @@ The following components should be implemented as global reusable components tha
 - Footer
 - Primary Buttons
 - Secondary Buttons
-- Cards
 - Section Headers
 
 ---
@@ -133,18 +132,14 @@ All primary actions should use the same button style across the site.
 
 ## Card Standards
 
-Cards may be used for:
-- Events
-- E-Board Members
-- Projects
-- Sponsors
-- Announcements
+Card standardization is currently under discussion.
 
-### Decisions Needed
-- Border radius
-- Shadow style
-- Hover effect
-- Internal padding
+Potential approach:
+- Create a generic reusable card component
+- Allow page owners to pass colors and content based on page needs
+
+Status:
+- TBD
 
 ---
 
